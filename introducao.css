@@ -1,0 +1,64 @@
+.menuprincipal{
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+.menuprincipal h1{
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.menuprincipal h1::before{
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url(img/decoracao.svg) no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -50px;
+    z-index: -1;
+
+}
+
+.menuprincipal p {
+    font-size: 1.5rem;
+    color: #525252;
+}
+
+@media (max-width: 1000px){
+    .menuprincipal h1{
+        font-size: 3rem;
+
+    }
+}
+@media (max-width: 800px){
+    .menuprincipal{
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .menuprincipal h1{
+        font-size: 2rem;
+    }
+    .menuprincipal h1::before{
+        width: 30px;
+        height: 10px;
+        left: 0px;
+    }
+}
+@media (max-width: 500px)
+
+{
+    .menuprincipal img{
+        display: none;
+    }
+    .menuprincipal{
+        grid-template-columns: 1fr;
+    }
+}
